@@ -29,7 +29,7 @@ class m210702_185546_create_user_table extends Migration
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
     }
-
+    //sadsadsadas
     /**
      * {@inheritdoc}
      */
