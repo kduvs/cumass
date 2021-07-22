@@ -20,13 +20,13 @@ class m210702_185546_create_user_table extends Migration
  
         $this->createTable('user', [
             'id' => $this->primaryKey(),
-            'username' => $this->string()->notNull()->unique(),
+            'email' => $this->string()->notNull()->unique(),
             'auth_key' => $this->string(32)->notNull(),
             'password_hash' => $this->string()->notNull(),
             'password_reset_token' => $this->string()->unique(),
-            'email' => $this->string()->notNull()->unique(),
+            'verification_token' => $this->string()->unique(),
             'created_at' => $this->integer()->notNull(),
-            'updated_at' => $this->integer()->notNull(),
+            'status' => $this->smallinteger(6)->defaultValue(9)->notNull(),
         ], $tableOptions);
     }
     //sadsadsadas
