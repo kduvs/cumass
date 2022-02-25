@@ -1,11 +1,14 @@
 <?php
 
-namespace app\models;
+namespace app\models\forms;
 
 use Yii;
-use app\models\User;
+use app\models\entities\User;
 use yii\base\Model;
 
+/**
+ * Resend verification email form
+ */
 class ResendVerificationEmailForm extends Model
 {
     /**
@@ -24,7 +27,7 @@ class ResendVerificationEmailForm extends Model
             ['email', 'required'],
             ['email', 'email'],
             ['email', 'exist',
-                'targetClass' => '\app\models\User',
+                'targetClass' => '\app\models\entities\User',
                 'filter' => ['status' => User::STATUS_INACTIVE],
                 'message' => 'Пользователя с данной почтой не существует.'
             ],

@@ -2,8 +2,6 @@
 
 namespace app\controllers;
 
-use app\models\ResendVerificationEmailForm;
-use app\models\VerifyEmailForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -11,11 +9,13 @@ use yii\web\Controller;
 use yii\base\InvalidArgumentException;
 use yii\web\BadRequestHttpException;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\SignupForm;
-use app\models\ContactForm;
-use app\models\PasswordResetRequestForm;
-use app\models\ResetPasswordForm;
+use app\models\forms\LoginForm;
+use app\models\forms\SignupForm;
+use app\models\forms\ContactForm;
+use app\models\forms\PasswordResetRequestForm;
+use app\models\forms\ResetPasswordForm;
+use app\models\forms\ResendVerificationEmailForm;
+use app\models\forms\VerifyEmailForm;
 
 class SiteController extends Controller
 {
