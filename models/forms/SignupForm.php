@@ -1,9 +1,10 @@
 <?php
-namespace app\models;
+
+namespace app\models\forms;
 
 use Yii;
 use yii\base\Model;
-use app\models\User;
+use app\models\entities\User;
 
 class SignupForm extends Model
 {
@@ -23,7 +24,7 @@ class SignupForm extends Model
             ['email', 'trim'],
             ['email', 'email'],
             ['email', 'string', 'max' => 255],
-            ['email', 'unique', 'targetClass' => '\app\models\User', 'message' => 'Данная почта уже занята.'],
+            ['email', 'unique', 'targetClass' => '\app\models\entities\User', 'message' => 'Данная почта уже занята.'],
 
             ['password', 'string', 'min' => 12],
         ];

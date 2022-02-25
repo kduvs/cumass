@@ -1,9 +1,9 @@
 <?php
-namespace app\models;
+namespace app\models\forms;
 
 use yii\base\InvalidArgumentException;
 use yii\base\Model;
-use app\models\User;
+use app\models\entities\User;
 
 /**
  * Password reset form
@@ -13,7 +13,7 @@ class ResetPasswordForm extends Model
     public $password;
 
     /**
-     * @var \common\models\User
+     * @var app\models\entities\User
      */
     private $_user;
 
