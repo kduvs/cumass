@@ -51,6 +51,22 @@ $config = [
             ],
         ],
     ],
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+        'api' => [
+            'class' => 'app\modules\api\Module',
+            'modules' => [
+                'open' => [
+                    'class' => 'app\modules\api\modules\open\Module',
+                ],
+                'shut' => [
+                    'class' => 'app\modules\api\modules\shut\Module',
+                ],
+            ],
+        ],
+    ],
     'params' => $params,
 ];
 
