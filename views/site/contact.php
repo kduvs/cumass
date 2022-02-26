@@ -4,8 +4,8 @@
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\models\forms\ContactForm */
 
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\Html;
+use yii\bootstrap5\ActiveForm;
 use yii\captcha\Captcha;
 
 $this->title = 'Contact';

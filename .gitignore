@@ -31,3 +31,6 @@ tests/_support/_generated
 
 #vagrant folder
 /.vagrant
+
+# maintaining the security of mail data
+/config/swiftmailer-transport.php

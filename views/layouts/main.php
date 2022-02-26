@@ -3,10 +3,12 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
+// use yii\bootstrap5\Html;
+use yii\bootstrap5\Breadcrumbs;
+use yii\bootstrap5\Html;
+use yii\bootstrap5\Nav;
+use yii\bootstrap5\NavBar;
+// use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\widgets\Alert;
 
@@ -32,7 +34,7 @@ AppAsset::register($this);
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
         ],
     ]);
     $menuItems = [
@@ -54,7 +56,7 @@ AppAsset::register($this);
             . '</li>';
     }
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'navbar-nav ml-auto'],
         'items' => $menuItems,
     ]);
     NavBar::end();

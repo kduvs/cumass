@@ -32,7 +32,8 @@ $config = [
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
             //написать мейлер
-            'useFileTransport' => true,
+            'useFileTransport' => false,
+            'transport' => require(__DIR__ . '/swiftmailer-transport.php'),
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
