@@ -2,6 +2,7 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
+$route = array_merge(require(__DIR__ . '/route.php'));
 
 $config = [
     'id' => 'basic',
@@ -15,6 +16,9 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'V7RpNDddl6KOoIZ5kOdyZqTS6qE5FqY1',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ]
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -47,9 +51,9 @@ $config = [
         'db' => $db,
         'urlManager' => [
             'enablePrettyUrl' => true,
+            'enableStrictParsing' => true,
             'showScriptName' => false,
-            'rules' => [
-            ],
+            'rules' => $route,
         ],
     ],
     'modules' => [
@@ -57,6 +61,7 @@ $config = [
             'class' => 'app\modules\admin\Module',
         ],
         'api' => [
+            'basePath' => '@app/modules/api',
             'class' => 'app\modules\api\Module',
             'modules' => [
                 'open' => [
